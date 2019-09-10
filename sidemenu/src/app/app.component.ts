@@ -23,9 +23,24 @@ export class AppComponent {
       icon: 'list'
     },
     {
-      title: 'ShowMe',
-      url: '/showme',
-      icon: 'list'
+      title: 'Menu',
+      url: '/menu',
+      icon: 'grid'
+    },
+    {
+      title: 'Camera',
+      url: '/camera',
+      icon: 'camera'
+    },
+    {
+      title: 'TextToSpeech',
+      url: '/tts',
+      icon: 'mic'
+    },
+    {
+      title: 'Calendar',
+      url: '/calendar',
+      icon: 'calendar'
     }
   ];
 

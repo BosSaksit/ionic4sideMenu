@@ -9,17 +9,28 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
+import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
+import { TextToSpeech } from '@ionic-native/text-to-speech/ngx';
+
+import { CalendarModule } from "ion2-calendar";
+
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
   imports: [
-    BrowserModule,
+    BrowserModule, 
+    CalendarModule,
     IonicModule.forRoot(),
     AppRoutingModule
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    Camera,
+   
+    TextToSpeech,
+   
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
