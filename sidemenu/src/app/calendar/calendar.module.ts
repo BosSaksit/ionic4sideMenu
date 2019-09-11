@@ -7,6 +7,9 @@ import { IonicModule } from '@ionic/angular';
 
 import { CalendarPage } from './calendar.page';
 
+import { NgCalendarModule } from 'ionic2-calendar'; 
+
+
 
 const routes: Routes = [
   {
@@ -20,7 +23,7 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
-   
+    NgCalendarModule,  
     RouterModule.forChild(routes)
   ],
   declarations: [CalendarPage]

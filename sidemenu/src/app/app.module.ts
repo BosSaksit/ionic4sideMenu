@@ -12,7 +12,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 import { TextToSpeech } from '@ionic-native/text-to-speech/ngx';
 
-import { CalendarModule } from "ion2-calendar";
+
 
 
 @NgModule({
@@ -20,7 +20,7 @@ import { CalendarModule } from "ion2-calendar";
   entryComponents: [],
   imports: [
     BrowserModule, 
-    CalendarModule,
+   
     IonicModule.forRoot(),
     AppRoutingModule
   ],

@@ -1,13 +1,28 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
     <ion-title>calendar</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-    <ion-calendar [(ngModel)]="date"
-    (onChange)="onChange($event)"
-    [type]="type"
-    [format]="'YYYY-MM-DD'">
-</ion-calendar>
+<ion-content padding>
+
+  <div *ngIf="showDate != null" text-center>
+    <ion-label>วันที่ {{ showDate }}</ion-label>
+  </div>
+  <br>
+  <div text-center>
+    <ion-label style="font-size: 20px"> {{ monthEng }}</ion-label>
+  </div>
+
+
+  <calendar [eventSource]="eventSource" [calendarMode]="calendar.mode" [currentDate]="calendar.currentDate"
+    (onEvenSelected)="onEvenSelected($event)" (onTitleChanged)="onTitleChanged($event)"
+    (onTimeSelected)="onTimeSelected($event)" startHour="6" endHour="20" step="30" startingDayWeek="2">
+  </calendar>
+
+
+
 </ion-content>
